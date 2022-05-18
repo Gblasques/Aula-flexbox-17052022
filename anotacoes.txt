@@ -1,0 +1,60 @@
+Atalho de criação com * (exemplo = div*5 vai criar 5 divs automaticamente)
+
+_______
+
+Reset basico para o CSS >>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+_______
+
+@media no css cria regras, por exemplo:
+@media (min-width: 475px) {
+    div{
+        background-color: blue;
+        width: 50%;
+        
+    }
+}
+Esse @media aplica esse CSS apenas quando a pagina chegar na regra descrita(475px)
+
+Serve para a pratica do "Mobile first" onde criamos a responsividade para diversos dispositivos Mobile (sempre com o "min-width")
+exemplo:
+/* Daqui para baixo = celular ou maior */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  div {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    margin: 5px 0;
+  }
+  /* Daqui pra baixo celular grande, table ou maior */
+  @media (min-width: 460px) {
+    div {
+      background-color: blue;
+      width: 80%;
+    }
+  }
+  /* Daqui pra baixo table grande ou computador ou maior */
+  @media (min-width: 768px) {
+    div {
+      background-color: green;
+      width: 50%;
+    }
+  }
+  /* Daqui pra baixo computador ou maior */
+  @media (min-width: 1280px) {
+    div {
+      background-color: black;
+      width: 20%;
+    }
+  }
+  
+_________
